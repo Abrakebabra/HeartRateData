@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct EncodableArray: Encodable {
+struct EncodableArray: Codable {
     let arrayHeartRate: [Int]
 }
 

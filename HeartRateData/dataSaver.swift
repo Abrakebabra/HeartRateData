@@ -12,12 +12,13 @@ import Foundation
 func saveToFile(data: Data) {
     
     // get documents directory
-    guard let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+    guard var directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
         
         print("directory not found")
         return
     }
     
+    directory.appendPathComponent("DataLife/HeartRate", isDirectory: true)
     
     var fileIteration: Int = 1
     var availableFileName: Bool = false
