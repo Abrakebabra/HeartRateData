@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		646A761224652C5E0051AAF3 /* jsonSerialiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646A761124652C5E0051AAF3 /* jsonSerialiser.swift */; };
+		646A761424652F3A0051AAF3 /* dataSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646A761324652F3A0051AAF3 /* dataSaver.swift */; };
 		64FCDD8B24625EAB005ECFAE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FCDD8A24625EAB005ECFAE /* main.swift */; };
+		64FCDD9224625ECB005ECFAE /* bluetoothLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FCDD9124625ECB005ECFAE /* bluetoothLE.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		646A761124652C5E0051AAF3 /* jsonSerialiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonSerialiser.swift; sourceTree = "<group>"; };
+		646A761324652F3A0051AAF3 /* dataSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataSaver.swift; sourceTree = "<group>"; };
 		64FCDD8724625EAB005ECFAE /* HeartRateData */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HeartRateData; sourceTree = BUILT_PRODUCTS_DIR; };
 		64FCDD8A24625EAB005ECFAE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		64FCDD9124625ECB005ECFAE /* bluetoothLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluetoothLE.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				64FCDD8A24625EAB005ECFAE /* main.swift */,
+				64FCDD9124625ECB005ECFAE /* bluetoothLE.swift */,
+				646A761124652C5E0051AAF3 /* jsonSerialiser.swift */,
+				646A761324652F3A0051AAF3 /* dataSaver.swift */,
 			);
 			path = HeartRateData;
 			sourceTree = "<group>";
@@ -119,7 +128,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				646A761224652C5E0051AAF3 /* jsonSerialiser.swift in Sources */,
+				646A761424652F3A0051AAF3 /* dataSaver.swift in Sources */,
 				64FCDD8B24625EAB005ECFAE /* main.swift in Sources */,
+				64FCDD9224625ECB005ECFAE /* bluetoothLE.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,5 +8,43 @@
 
 import Foundation
 
-print("Hello, World!")
+let bleController = BLEController()
+bleController.start()
+
+var runProgram: Bool = true
+
+
+var bpmRecords: [Int] = []
+
+bleController.bpmReceived = {
+    bpm in
+    print(bpm)
+    if bpm > 40 {
+        bpmRecords.append(bpm)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+while runProgram {
+    print("Awaiting input")
+    let input: String? = readLine()
+    
+    switch input {
+    case "end":
+        let data = serialiser(array: bpmRecords)
+        
+    }
+    
+}
+
+
+
 
