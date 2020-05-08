@@ -36,6 +36,9 @@ while runProgram {
     
     switch input {
     case "end":
+        
+        bleController.stop()
+        
         dataSemaphore.wait()
         
         do {
@@ -47,6 +50,10 @@ while runProgram {
         }
         
         dataSemaphore.signal()
+        
+        
+    case "exit":
+        runProgram = false
         
     default:
         continue

@@ -41,6 +41,11 @@ class BLEController: CBCentralManager {
     }
     
     
+    func stop() -> Void {
+        centralManager.cancelPeripheralConnection(heartRatePeripheral)
+    }
+    
+    
     func centralManager(_ central: CBCentralManager,
                         didDiscover peripheral: CBPeripheral,
                         advertisementData: [String: Any],
