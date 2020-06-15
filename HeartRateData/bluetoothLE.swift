@@ -7,6 +7,16 @@
 //
 
 
+
+
+/*
+ Keith's:
+ Optional(<CBPeripheral: 0x7fd161404b10, identifier = 2A79F4A2-BC6A-4EF8-B6EF-3704E6FC023F, name = CATEYE_HRM, state = connected>)
+ 
+ Kelsey's:
+ Optional(<CBPeripheral: 0x7f9a0b807dd0, identifier = 1E02DD8F-CD49-4DA0-81A3-FE3AA31CF73C, name = CATEYE_HRM, state = connected>)
+ */
+
 import Foundation
 import CoreBluetooth
 
@@ -36,8 +46,10 @@ class BLEController: CBCentralManager {
     let batteryLevelCharacteristicCBUUID = CBUUID(string: "2A19")
     
     
+    
     func start() -> Void {
-        centralManager = CBCentralManager(delegate: self, queue: self.btQueue)
+        print("bluetooth started")
+        self.centralManager = CBCentralManager(delegate: self, queue: self.btQueue)
     }
     
     
@@ -78,10 +90,19 @@ extension BLEController: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager)  {
         switch central.state {
         case .poweredOff:
-            print("Bluetooth central manager is on")
-        case .poweredOn:
             print("Bluetooth central manager is off")
+        case .poweredOn:
+            print("Bluetooth central manager is on")
+            sleep(1)
             centralManager.scanForPeripherals(withServices: [self.heartRateServiceCBUUID])
+        case .resetting:
+            print("Bluetooth central manager is resetting")
+        case .unauthorized:
+            print("Bluetooth central manager is unauthorized")
+        case .unsupported:
+            print("Bluetooth central manager is unsupported")
+        case .unknown:
+            print("Bluetooth central manager is in unknown state")
         default:
             print("Bluetooth central manager state is other")
         }
